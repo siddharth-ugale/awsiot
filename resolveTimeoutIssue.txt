@@ -1,0 +1,14 @@
+There are several things for you to check to resolve constant conection timeout issue:
+
+0. Integrity of your endpoint and port
+Your AWS IoT MQTT endpoint should be in the following form:
+<RANDOM_STRING>.iot.<REGION>.amazonaws.com
+You should be able to get access to it by clicking on the top right question mark in your AWS IoT Console. (See attached pictures)
+Note that:
+If you are using X.509 certificate based mutual authentication, use 8883
+If you are using MQTT over WebSocket, use 443
+
+1. The integrity of your credentials and attached policy
+You can do the check by verifying the connectivity using another MQTT client, e.g., MQTT.fx. If you have granted the permission for AWS IoT access, you should be able to connect and perform MQTT operations.
+
+It will be helpful for us to investigate the issue if these information is provided. Please let us know how it goes.
